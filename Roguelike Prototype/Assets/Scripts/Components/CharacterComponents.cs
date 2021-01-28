@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// Parent class for character. Handle functions are called like update functions in child classes
+
 public class CharacterComponents : MonoBehaviour
 {
 
