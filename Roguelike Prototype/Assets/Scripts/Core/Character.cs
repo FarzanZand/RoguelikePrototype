@@ -12,15 +12,4 @@ public class Character : MonoBehaviour
     }
 
     [SerializeField] private CharacterTypes characterType; 
-
-    void Start()
-    {
-        
-    }
-
-
-    void Update()
-    {
-        
-    }
 }
