@@ -9,8 +9,8 @@ using UnityEngine;
 
 public class CharacterDash : CharacterComponents
 {
-    [SerializeField] private float dashDistance = 8f;
-    [SerializeField] private float dashDuration = 0.5f;
+    [SerializeField] private float dashDistance = 3f;
+    [SerializeField] private float dashDuration = 0.2f;
     private bool isDashing;
     private float dashTimer;
     private Vector2 dashOrigin;

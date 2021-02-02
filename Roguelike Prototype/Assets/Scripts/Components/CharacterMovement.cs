@@ -15,6 +15,8 @@ public class CharacterMovement : CharacterComponents
     [SerializeField] private float walkSpeed = 6f;
     public float MoveSpeed { get; set; }
 
+    // private readonly int movingParameter = Animator.StringToHash("Moving"); I do not want to use this. 
+
     protected override void Start()
     {
         base.Start();
@@ -26,6 +28,7 @@ public class CharacterMovement : CharacterComponents
     {
         base.HandleAbility();
         MoveCharacter();
+        UpdateAnimations(); 
     }
 
     // Sets up characterMovement to pass to controller
@@ -41,4 +44,17 @@ public class CharacterMovement : CharacterComponents
     {
         MoveSpeed = walkSpeed;
     }
+
+    private void UpdateAnimations()
+    {
+        if (Mathf.Abs(horizontalInput) > 0.1f || Mathf.Abs(verticalInput) > 0.1f)
+        {
+            animator.SetBool("moving", true);
+        }
+        else
+        {
+            animator.SetBool("Moving", false); 
+        }
+    }
+
 }

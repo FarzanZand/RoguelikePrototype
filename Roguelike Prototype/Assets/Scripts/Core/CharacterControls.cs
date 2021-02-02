@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 // Can move character if NormalMovement is true. 
+// Normalized returns the magnitude of the larger value as 1.0, and other as < 1 if it is less.
+
+// This script shows what input the character is getting and moves it to proper scripts
 
 public class CharacterControls : MonoBehaviour
 {
@@ -35,8 +38,8 @@ public class CharacterControls : MonoBehaviour
         myRigidBody2D.MovePosition(newPosition);
     }
 
-    public void SetMovement(Vector2 newPosition)
+    public void SetMovement(Vector2 currentMovement) // changed from newPosition cause this makes more sense
     {
-        CurrentMovement = newPosition; 
+        CurrentMovement = currentMovement; 
     }
 }
