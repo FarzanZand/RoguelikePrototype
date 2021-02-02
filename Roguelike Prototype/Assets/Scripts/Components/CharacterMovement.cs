@@ -49,7 +49,7 @@ public class CharacterMovement : CharacterComponents
     {
         if (Mathf.Abs(horizontalInput) > 0.1f || Mathf.Abs(verticalInput) > 0.1f)
         {
-            animator.SetBool("moving", true);
+            animator.SetBool("Moving", true);
         }
         else
         {
