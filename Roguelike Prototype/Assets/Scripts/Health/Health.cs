@@ -109,7 +109,7 @@ public class Health : MonoBehaviour
 
         CurrentHealth = initialHealth;
         CurrentShield = initialShield;
-        
+
         UIManager.Instance.UpdateHealth(CurrentHealth, maxHealth, CurrentShield, maxShield);
     }
 
@@ -117,5 +117,4 @@ public class Health : MonoBehaviour
     {
         gameObject.SetActive(false);
     }
-
 }
