@@ -48,7 +48,7 @@ public class Health : MonoBehaviour
         }
     }
 
-    // Handle taking damage
+    // Handle taking damage 
     public void TakeDamage(int damage)
     {
         if (CurrentHealth <= 0)
