@@ -12,6 +12,7 @@ public class CharacterControls : MonoBehaviour
     private Rigidbody2D myRigidBody2D;
     public Vector2 CurrentMovement { get; set; }
     public bool NormalMovement { get; set; }
+    private Vector2 recoilMovement; 
 
     void Start()
     {
@@ -21,10 +22,17 @@ public class CharacterControls : MonoBehaviour
 
     private void FixedUpdate()
     {
+        Recoil(); 
+        
         if (NormalMovement)
         {
         MoveCharacter();
         }
+    }
+
+    public void ApplyRecoil(Vector2 recoilDirection, float recoilForce) 
+    {
+        recoilMovement = recoilDirection.normalized * recoilForce; //Only need the direction, so normalize it
     }
 
     public void MoveCharacter()
@@ -41,5 +49,14 @@ public class CharacterControls : MonoBehaviour
     public void SetMovement(Vector2 currentMovement) // changed from newPosition cause this makes more sense
     {
         CurrentMovement = currentMovement; 
+    }
+
+    // If enough recoil to move, recoil the body
+    private void Recoil()
+    {
+        if(recoilMovement.magnitude >0.1f)
+        {
+            myRigidBody2D.AddForce(recoilMovement); 
+        }
     }
 }
