@@ -5,6 +5,10 @@ using UnityEngine;
 // Parent class for character. Handle functions are called like update functions in child classes
 // Gives access to necessary parent classes. Like a parent hub. 
 
+// HandleAbility manages ability logic
+// HandleInput handles input from player
+// InternalInput handles input from code. But is this necessary? 
+
 public class CharacterComponents : MonoBehaviour
 {
 
@@ -13,11 +17,15 @@ public class CharacterComponents : MonoBehaviour
 
     protected CharacterControls controller;         // Access to control input from player
     protected CharacterMovement characterMovement;  // Access to how character should be moved
+    protected CharacterWeapon characterWeapon; 
     protected Animator animator;
+    protected Character character;
 
     protected virtual void Start()
     {
         controller = GetComponent<CharacterControls>();
+        character = GetComponent<Character>();
+        characterWeapon = GetComponent<CharacterWeapon>(); 
         characterMovement = GetComponent<CharacterMovement>();
         animator = GetComponent<Animator>();
     }

@@ -58,6 +58,4 @@ public class CharacterDash : CharacterComponents
         isDashing = false;
         controller.NormalMovement = true; 
     }
-
-
 }
