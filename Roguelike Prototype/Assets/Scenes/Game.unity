@@ -381,7 +381,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &446187098
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -580,7 +580,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 986de7a311ab30b4ebe9539c1ba4af04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponToUse: {fileID: -1848842699783558918, guid: a708bf869565bf3458f5148fec928913, type: 3}
+  weaponToUse: {fileID: -3450456240590666394, guid: a708bf869565bf3458f5148fec928913, type: 3}
   weaponHolderPosition: {fileID: 1047467820}
 --- !u!1 &519420028
 GameObject:

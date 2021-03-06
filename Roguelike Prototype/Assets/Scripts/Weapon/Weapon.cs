@@ -36,13 +36,13 @@ public class Weapon : MonoBehaviour
 
 
 
-    void Awake()
+    protected virtual void Awake()
     {
         CurrentAmmo = magazineSize;
         WeaponAmmo = GetComponent<WeaponAmmo>();
     }
 
-    private void Update()
+    protected virtual void Update()
     {
         WeaponCanShoot();
         RotateWeapon();
@@ -90,9 +90,9 @@ public class Weapon : MonoBehaviour
         }
     }
 
-    private void RequestShot()
+    protected virtual void RequestShot()
     {
-        if(!CanShoot)
+        if(!CanShoot)  
         {
             return;
         }
@@ -103,8 +103,6 @@ public class Weapon : MonoBehaviour
         }
 
         WeaponAmmo.ConsumeAmmo();
-        CanShoot = false;
-
     }
 
     private void Recoil()
@@ -123,7 +121,7 @@ public class Weapon : MonoBehaviour
         }
     }
 
-    private void WeaponCanShoot()
+    protected virtual void WeaponCanShoot()
     {
         if (Time.time > nextShotTime)
         {
@@ -151,7 +149,7 @@ public class Weapon : MonoBehaviour
         }
     }
 
-    private void RotateWeapon()
+    protected virtual void RotateWeapon()
     {
         if(WeaponOwner.GetComponent<CharacterFlip>().FacingRight)
         {

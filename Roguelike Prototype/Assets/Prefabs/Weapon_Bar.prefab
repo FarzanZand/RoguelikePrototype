@@ -68,8 +68,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1706144093
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 7144583015058605669, guid: a71124f635d26f2489115ffd57c6790a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -91,9 +91,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3910517971122546867}
-  - component: {fileID: -1848842699783558918}
   - component: {fileID: 3389347841547856215}
   - component: {fileID: 5111313713105042507}
+  - component: {fileID: -3450456240590666394}
+  - component: {fileID: -9218288344075401455}
   m_Layer: 0
   m_Name: Weapon_Bar
   m_TagString: Untagged
@@ -116,24 +117,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &-1848842699783558918
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8828022199095188191}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 27571b15ac1858f4f998de82f1d14c0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timeBtwShots: 0.5
-  useMagazine: 1
-  magazineSize: 30
-  autoReload: 1
-  useRecoil: 1
-  recoilForce: 5
 --- !u!114 &3389347841547856215
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -159,3 +142,38 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   reticlePrefab: {fileID: 3238259229337731044, guid: 055dabb07d94ee64fa33008bc10aacf0, type: 3}
+--- !u!114 &-3450456240590666394
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8828022199095188191}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22e219210bc1c7f4f838face30d049ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeBtwShots: 0.2
+  useMagazine: 1
+  magazineSize: 30
+  autoReload: 1
+  useRecoil: 1
+  recoilForce: 5
+  projectileSpawnPosition: {x: 0.74, y: 0.18, z: 0}
+  projectileSpread: {x: 0, y: 0, z: 5}
+--- !u!114 &-9218288344075401455
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8828022199095188191}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebd589595a1e4484d91e71439b682571, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectPrefab: {fileID: 3906663350727321938, guid: b5bd6da9c80f8bc42a722f6f2480e59f, type: 3}
+  poolSize: 10
+  poolCanExpand: 1
